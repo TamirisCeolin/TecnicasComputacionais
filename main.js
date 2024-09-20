@@ -19,7 +19,7 @@ const perguntas = [
                 texto: "Isso é maravilhoso!",
                 afirmacao: [
                     "Quis saber como usar IA no seu dia a dia.",
-                     "Achou assustador pensar na velocidade na qual a tecnologia está avançando."
+                    "Achou assustador pensar na velocidade na qual a tecnologia está avançando."
                 ]
             }
         ]
@@ -124,7 +124,7 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
+    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
@@ -135,5 +135,11 @@ function mostraResultado() {
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
+
+function aleatorio(lista) {
+    const posicao = Math.floor(Math.random() * lista.length);
+    return lista[posicao];
+}
+
 
 mostraPergunta();
