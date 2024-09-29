@@ -1,5 +1,5 @@
-import { aleatorio } from "./aleatorio";
-import { perguntas } from "./perguntas";
+import { aleatorio } from './aleatorio';
+import { perguntas } from './perguntas';
 
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
@@ -46,7 +46,7 @@ function mostraResultado() {
     botaoJogarNovamente.addEventListener("click", jogarNovamente());
 }
 
-function jogarNovamente(){
+function jogarNovamente() {
     atual = 0;
     historiaFinal = "";
     mostraPergunta();
