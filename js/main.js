@@ -34,7 +34,13 @@ function mostraAlternativas() {
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
-    atual++;
+    if(opcaoSelecionada.proxima !== undefined){
+        atual = opcaoSelecionada.proxima;
+    }else{
+        mostraResultado();
+        return;
+    }
+
     mostraPergunta();
 }
 
@@ -53,9 +59,9 @@ function jogarNovamente() {
     mostraPergunta();
 }
 
-function substituiNome(){
-    for(const pergunta of perguntas){
-        pergunta.enunciado=pergunta.enunciado.replace(/você/g, nome);
+function substituiNome() {
+    for (const pergunta of perguntas) {
+        pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
     }
 }
 

@@ -14,7 +14,7 @@ export const perguntas = [
                 texto: "Isso é maravilhoso!",
                 afirmacao: [
                     "Quis saber como usar IA no seu dia a dia.",
-                    "Achou assustador pensar na velocidade na qual a tecnologia está avançando."
+                    "Pensou que IA pode ajudar em tarefas da sua vida."
                 ]
             }
         ]
